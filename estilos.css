@@ -1,0 +1,24 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: rgb(130, 0, 50);
+  color: white;
+}
+
+.cabecera {
+ position: sticky;
+ top: 0;
+ background: rgb(87, 0, 33);
+ padding: 15px 0;
+ z-index: 1000; 
+ border-bottom: 2px solid rgba(255, 0, 115, 0.6);
+ box-shadow: 0 4px 15px rgba(255, 42, 138, 0.6);
+}
+
+.barra-navegacion {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 30px;
+}
