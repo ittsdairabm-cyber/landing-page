@@ -1,24 +1,74 @@
 html,
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: rgb(130, 0, 50);
   color: white;
 }
 
 .cabecera {
- position: sticky;
- top: 0;
- background: rgb(87, 0, 33);
- padding: 15px 0;
- z-index: 1000; 
- border-bottom: 2px solid rgba(255, 0, 115, 0.6);
- box-shadow: 0 4px 15px rgba(255, 42, 138, 0.6);
+  position: sticky;
+  top: 0;
+  background: rgb(87, 0, 33);
+  padding: 15px 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(255, 0, 115, 0.6);
+  box-shadow: 0 4px 15px rgba(255, 42, 138, 0.6);
 }
 
 .barra-navegacion {
- display: flex;
- justify-content: space-between;
- align-items: center;
- gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero {
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  text-shadow: 0 0 20px rgba(255, 0, 115, 0.8);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.destacado {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 25px rgba(255, 0, 115, 0.9);
+}
+
+.seccion {
+  padding: 80px 0;
+  border-bottom: 3px solid rgba(255, 0, 115, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(130, 0, 50, 1) 0%,
+    rgba(100, 0, 40, 1) 100%
+  );
+}
+
+.col-md-4 {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.col-md-4:hover {
+  transform: translateY(-5px);
 }
