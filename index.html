@@ -1,100 +1,330 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tipografía Alecrim -->
+    <!-- TIPOGRAFÍA -->
     <link href="https://fonts.googleapis.com/css2?family=Alecrim&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="estilos.css">
+
     <title>GEER</title>
+
 </head>
 
 <body>
 
     <header class="cabecera">
+
         <nav class="navbar navbar-expand-lg container">
-            
-            <!-- LOGO -->
-            <a class="navbar-brand logo" href="#">
-                <img src="logo.png" alt="Geer" class="logo-img">
+
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Geer" class="logo-nav">
             </a>
 
-            <!-- BOTÓN HAMBURGUESA -->
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <button class="navbar-toggler text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
-            <!-- MENÚ -->
             <div class="collapse navbar-collapse justify-content-end" id="menu">
-                <ul class="navbar-nav align-items-lg-center gap-lg-3 text-center">
+
+                <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#quieselgerr">Qui es el Geer?</a>
+                        <a class="nav-link menu-link" href="#quienesgeer">
+                            Quién es Geer?
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#Musica">Musica</a>
+                        <a class="nav-link menu-link" href="#musica">
+                            Música
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#Merchandising">Merchandising</a>
+                        <a class="nav-link menu-link" href="#merch">
+                            Merchandising
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light btn-sm mt-2 mt-lg-0">Buscar</button>
-                    </li>
+
                 </ul>
+
             </div>
 
         </nav>
+
     </header>
 
-    <!-- HERO -->
-    <section class="hero d-flex align-items-center justify-content-center text-center">
+    <section class="hero text-center">
+
         <div class="moon"></div>
 
-        <div>
-            <h1 class="display-2 fw-bold">GEER</h1>
-            <p class="lead destacado">La nueva voz que está marcando tendencia</p>
-            <button class="btn btn-lg btn-outline-light">Escuchar ahora</button>
+        <div class="hero-contenido">
+
+            <img src="logo.png" alt="Geer" class="hero-logo">
+
+            <p class="destacado">
+                La nueva voz que está marcando tendencia
+            </p>
+
+            <a href="https://open.spotify.com/intl-es/artist/5xRY25LS6k7oiKbK4pMqpB?si=de47a4880b06429c"
+                target="_blank"
+                class="btn btn-outline-light">
+
+                Escuchar ahora
+
+            </a>
+
         </div>
+
     </section>
 
-    <!-- SECCIONES -->
-    <section id="quieselgerr" class="seccion">
+    <section id="quienesgeer" class="seccion">
+
         <div class="container">
-            <h2>¿Quién es el Geer?</h2>
-            <p>Información sobre el artista.</p>
+
+            <h2>¿Quién es Geer?</h2>
+
+            <p>
+                GEER es un artista emergente que transforma emociones y pensamientos personales
+                en música íntima y honesta. Su proyecto nace desde la necesidad de expresar
+                aquello que muchas veces cuesta decir en el día a día.
+            </p>
+
+            <p>
+                A través de una estética minimalista y emocional,
+                GEER busca conectar con el público desde la naturalidad.
+            </p>
+
         </div>
+
     </section>
 
-    <section id="Musica" class="seccion">
+    <section id="musica" class="seccion">
+
         <div class="container">
+
             <h2>Música</h2>
-            <div class="row">
-                <div class="col-md-4">Canción 1</div>
-                <div class="col-md-4">Canción 2</div>
-                <div class="col-md-4">Canción 3</div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalMalson">
+
+                        Malson
+
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalSuperficial">
+
+                        Superficial
+
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalIcekely">
+
+                        Icekely
+
+                    </article>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="Merchandising" class="seccion">
+    <section id="merch" class="seccion">
+
         <div class="container">
+
             <h2>Merchandising</h2>
-            <div class="row">
-                <div class="col-md-4">Camiseta</div>
-                <div class="col-md-4">Sudadera</div>
-                <div class="col-md-4">Gorra</div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCamiseta">
+
+                        Camiseta
+
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalVinilo">
+
+                        Vinilo
+
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <article class="card-geer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalCD">
+
+                        CD
+
+                    </article>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <footer class="pie"></footer>
+    <!-- MODALS MUSICA -->
 
-    <!-- Bootstrap JS -->
+    <div class="modal fade" id="modalMalson" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content modal-geer">
+
+                <img src="malson.jpg" alt="Malson">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modalSuperficial" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content modal-geer">
+
+                <img src="superficial.jpg" alt="Superficial">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modalIcekely" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content modal-geer">
+
+                <img src="icekely.jpeg" alt="Icekely">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODALS MERCH -->
+
+    <div class="modal fade" id="modalCamiseta" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content modal-geer">
+
+                <img src="samarreta.jpg" alt="Camiseta">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modalVinilo" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content modal-geer">
+
+                <img src="vinil.png" alt="Vinilo">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modalCD" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content modal-geer">
+
+                <img src="cd.png" alt="CD">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const links = document.querySelectorAll('.menu-link');
+        const sections = document.querySelectorAll('.seccion');
+
+        links.forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                sections.forEach(section => {
+                    section.classList.remove('seccion-activa');
+                });
+
+                document
+                    .querySelector(link.getAttribute('href'))
+                    .classList.add('seccion-activa');
+
+            });
+
+        });
+
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

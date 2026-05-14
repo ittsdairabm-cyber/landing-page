@@ -1,113 +1,170 @@
 html,
 body {
   font-family: 'Alecrim', serif;
-  background: #0a0a0a;
+  background: #050505;
   color: #f5f5f5;
+  overflow-x: hidden;
+  margin: 0;
+
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
 .cabecera {
   position: sticky;
   top: 0;
-  background: rgba(10, 10, 10, 0.9);
-  padding: 10px 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(0, 0, 0, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 /* LOGO */
-.logo-img {
-  height: 30px;
-  object-fit: contain;
+.logo-nav {
+  height: 75px;
+
+  filter: brightness(0) invert(1);
 }
 
 /* NAV */
 .nav-link {
   color: white !important;
-  font-weight: 400;
+
   letter-spacing: 1px;
+
+  transition: .3s;
 }
 
 .nav-link:hover {
-  color: rgba(255,255,255,0.6) !important;
+  opacity: .6;
 }
 
 /* HERO */
 .hero {
-  height: 80vh;
+  height: 100vh;
+
   position: relative;
+
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: black;
 }
 
-/* IMAGEN PORTADA */
+/* FONDO */
 .hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background-image: url("portada.jpg");
+
   background-size: cover;
   background-position: center;
+
   filter: grayscale(100%) contrast(110%);
-  opacity: 0.55;
+
+  opacity: .55;
+
+  z-index: 0;
 }
 
-/* CAPA OSCURA + TEXTURA */
+/* TEXTURA */
 .hero::after {
   content: "";
+
   position: absolute;
   inset: 0;
-  background-image: url("https://www.transparenttextures.com/patterns/noise.png"),
-                    linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
-  opacity: 0.6;
+
+  background-image:
+    url("https://www.transparenttextures.com/patterns/noise.png"),
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.95),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.9)
+    );
+
+  opacity: .6;
+
+  z-index: 1;
 }
 
 /* LUNA */
 .moon {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+
+  width: 320px;
+  height: 320px;
+
+  top: 8%;
+  left: 8%;
+
   border-radius: 50%;
-  top: 10%;
-  left: 15%;
-  filter: blur(3px);
-  opacity: 0.3;
-}
 
-/* TEXTO HERO */
-.hero h1 {
-  font-size: 6rem;
-  letter-spacing: 8px;
-  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,.18),
+    transparent 70%
+  );
+
+  filter: blur(4px);
+
+  opacity: .25;
+
   z-index: 2;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  opacity: 0.8;
+/* CONTENIDO HERO */
+.hero-contenido {
   position: relative;
-  z-index: 2;
+
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* LOGO HERO */
+.hero-logo {
+  width: 500px;
+  max-width: 90%;
+
+  margin-bottom: -30px;
+
+  filter: brightness(0) invert(1);
+}
+
+/* TEXTO */
 .destacado {
-  font-weight: 400;
+  font-size: 1.3rem;
+
+  letter-spacing: 2px;
+
+  opacity: .9;
+
+  margin-bottom: 18px;
 }
 
-.hero button {
-  position: relative;
-  z-index: 2;
-}
-
-/* BOTONES */
+/* BOTÓN */
 .btn {
   border-radius: 0;
+
   letter-spacing: 1px;
+
+  padding: 12px 35px;
 }
 
 .btn-outline-light {
-  border-color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,.4);
 }
 
 .btn-outline-light:hover {
@@ -117,67 +174,113 @@ body {
 
 /* SECCIONES */
 .seccion {
-  padding: 80px 0;
-  background: #0a0a0a;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 100px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  opacity: .45;
+
+  transition: .5s;
+}
+
+/* ACTIVA */
+.seccion-activa {
+  opacity: 1;
+
+  transform: scale(1.01);
+}
+
+/* TITULOS */
+.seccion h2 {
+  margin-bottom: 30px;
 }
 
 /* CARDS */
-.col-md-4 {
-  padding: 20px;
+.card-geer {
+  padding: 25px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.card-geer:hover {
+  border-color: rgba(255,255,255,.35);
+
+  transform: translateY(-3px);
+}
+
+/* MODALS */
+.modal-geer {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s;
+
+  border: none;
 }
 
-.col-md-4:hover {
-  border-color: rgba(255,255,255,0.3);
+.modal-geer img {
+  width: 100%;
+
+  object-fit: cover;
 }
 
-/* NAV MOBILE */
+.modal-backdrop.show {
+  opacity: .9;
+}
+
+/* MENU MOBILE */
 .navbar-collapse {
-  background: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,.95);
+
   backdrop-filter: blur(10px);
-  padding: 15px;
+
+  padding: 20px;
+
   margin-top: 10px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
-  .logo-img {
+  .logo-nav {
     height: 25px;
   }
 
   .hero {
     height: auto;
-    padding: 60px 20px;
+
+    padding: 100px 20px;
   }
 
-  .hero h1 {
-    font-size: 3rem;
+  .hero-logo {
+    width: 240px;
+
+    margin-bottom: -15px;
   }
 
-  .hero p {
+  .destacado {
     font-size: 1rem;
+
+    margin-bottom: 15px;
+  }
+
+  .moon {
+    width: 180px;
+    height: 180px;
+
+    top: 5%;
+    left: 5%;
   }
 
   .hero::before {
     background-position: 60% center;
   }
 
-  .moon {
-    width: 200px;
-    height: 200px;
-    top: 5%;
-    left: 10%;
-  }
-
   .seccion {
-    padding: 50px 20px;
+    padding: 60px 20px;
   }
 
-  .col-md-4 {
-    margin-bottom: 20px;
-  }
 }
